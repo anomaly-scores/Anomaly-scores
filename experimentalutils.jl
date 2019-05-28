@@ -14,9 +14,6 @@ gridsearch(f, parameters...) = map(p -> f(p), Base.product(parameters...))
 
 global mainfolder = "D:/dev/julia/"
 if !isdir(mainfolder)
-    mainfolder = "/home/bimjan/dev/julia/" 
-end
-if !isdir(mainfolder)
     mainfolder = "/app/" 
 end
 if !isdir(mainfolder)
@@ -26,7 +23,6 @@ end
 # Here I will say
 
 const datafolder = mainfolder * "data/loda/public/datasets/numerical"
-const server_main_folder = "/home/bimjan/dev/julia/"
 
 loaddata(dataset, difficulty) =  ADatasets.makeset(ADatasets.loaddataset(dataset, difficulty, datafolder)..., 0.8, "low")
 
