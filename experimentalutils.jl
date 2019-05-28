@@ -22,6 +22,9 @@ end
 if !isdir(mainfolder)
     error("The main folder is unknown")
 end
+
+# Here I will say
+
 const datafolder = mainfolder * "data/loda/public/datasets/numerical"
 const server_main_folder = "/home/bimjan/dev/julia/"
 
